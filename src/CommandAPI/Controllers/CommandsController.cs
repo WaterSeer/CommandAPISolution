@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CommandAPI.Controllers{
     [Route("api/[controller]")]
-    [ApiControler]
+    [ApiController]
     public class CommandsController : ControllerBase
     {
         [HttpGet]
