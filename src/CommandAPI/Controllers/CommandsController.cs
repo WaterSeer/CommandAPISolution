@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CommandAPI.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommandAPI.Controllers{
@@ -6,6 +7,8 @@ namespace CommandAPI.Controllers{
     [ApiController]
     public class CommandsController : ControllerBase
     {
+        private readonly ICommandAPIRepo _repository = new ICommandAPIRepo();
+
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
